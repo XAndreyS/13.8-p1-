@@ -38,4 +38,4 @@ sum_money=sum(sum_money)
 print(f'Сумма стоимости билетов:{sum_money}')
 if amount_visitor>3:
     sum_money_discount=round(sum_money-(sum_money * 0.1))
-print(f'Сумма стоимости билетов с учётом скидки :{sum_money_discount}')с
+print(f'Сумма стоимости билетов с учётом скидки :{sum_money_discount}')
