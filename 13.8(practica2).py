@@ -10,7 +10,7 @@ amount_visitor=()   #Количество посетителей
 #цикл while
 while True:
     try:
-        amount_visitor=int(input('Введите количество посетителей:'))
+        amount_visitor=int(input('Введите количество билетов:'))
     except ValueError as error:
         print("Не верный ввод!Вы должны вводить только  цифры:")
     else:
@@ -38,4 +38,4 @@ sum_money=sum(sum_money)
 print(f'Сумма стоимости билетов:{sum_money}')
 if amount_visitor>3:
     sum_money_discount=round(sum_money-(sum_money * 0.1))
-print(f'Сумма стоимости билетов с учётом скидки :{sum_money_discount}')
+print(f'Сумма стоимости билетов с учётом скидки :{sum_money_discount}')с
