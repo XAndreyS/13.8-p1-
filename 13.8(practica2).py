@@ -16,7 +16,8 @@ while True:
     else:
         if amount_visitor > 0:
             break
-#Далее ввод возраста посетителей и проверка на ввод  только цифр и значений выше нуля
+#Далее ввод возраста посетителей и проверка на ввод  только цифр
+#проверку на ввод отрицательных чисел в генераторе списков я пока не осилил
 while True:
     try:
         age = [int(input("Введите возраст для посетителя(ей):")) for age_users in range(amount_visitor)]
@@ -25,8 +26,9 @@ while True:
     else:
         break
 print(f'Возраст посетителя(ей):{age}')
-for j in age:
-    age_money=j
+#Далее присваивание цен согласно возрасту(список age) посетителей
+for money in age:
+    age_money=money
     if age_money>=18 and age_money<25:
         sum_money.append(money_teen)
     elif age_money>=25:
@@ -34,8 +36,11 @@ for j in age:
     elif age_money<18:
         sum_money.append(money_kid)
 print(f'Стоимость билета{sum_money}')
+#Далее расёт суммы всех билетов
 sum_money=sum(sum_money)
 print(f'Сумма стоимости билетов:{sum_money}')
+#Далее расчет суммы с учётом скидки если кол-во посетителей(amount_visitor) более трех
 if amount_visitor>3:
     sum_money_discount=round(sum_money-(sum_money * 0.1))
 print(f'Сумма стоимости билетов с учётом скидки :{sum_money_discount}')
+#Делать код меньше это пока,что сложно для  понимания и чтения этого кода.
